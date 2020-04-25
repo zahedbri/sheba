@@ -1,0 +1,10 @@
+body {
+  @include no-touch-select;
+  @include text-size-adjust(100%);
+  @include font-smoothing(on);
+}
+
+a {
+  @include transition(.3s cubic-bezier(.25, .8, .25, 1));
+  @include transition-property(color, background-color, opacity);
+}
