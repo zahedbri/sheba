@@ -1,0 +1,13 @@
+export { default as HeroBanner } from './HeroBanner';
+export { default as FeaturedCategories } from './FeaturedCategories';
+export { default as FeaturedCategoriesMobile } from './FeaturedCategoriesMobile';
+export { default as HighDemand } from './HighDemand';
+export { default as TrendingServices } from './TrendingServices';
+export { default as HappyService } from './HappyService';
+export { default as Counter } from './Counter';
+export { default as ServiceProcess } from './ServiceProcess';
+export { default as Testimonial } from './Testimonial';
+export { default as AppDownload } from './AppDownload';
+export { default as RequestService } from './RequestService';
+export { default as OfficeSolution } from './OfficeSolution';
+export { default as BecomePartner } from './BecomePartner';

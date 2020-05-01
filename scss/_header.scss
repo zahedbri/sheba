@@ -1,0 +1,99 @@
+.Header {
+
+  .navbar {
+
+    .nav {
+
+      &-link {
+        font-weight: 600;
+        color: rgba($color: $black, $alpha: .9)
+      }
+    }
+
+    &-toggler {
+      border: 0;
+      padding: 6px;
+      border-radius: 100%;
+      background-color: $gray-200;
+
+      &:hover {
+        outline: none;
+      }
+      
+      &.collapsed {
+        background-color: transparent;
+      }
+    }
+
+    .MobileSearch {
+      display: none;
+    }
+
+    .HeroSearch {
+      margin-top: 0;
+      
+      &-LocationPicker {
+
+        &__Btn {
+          padding: 0;
+          border: 0;
+        }
+      }
+      
+      .HeroSelect {
+
+        &__control {
+          padding: 6px 12px;
+          border: 1px solid $gray-300 !important;
+        }
+
+        @include media-breakpoint-between(md, lg) {
+          min-width: 380px;
+          font-size: 14px;
+
+          &__control {
+            padding-left: 6px;
+          }
+        }
+      }
+
+      &-Search__Btn {
+        top: 5px;
+
+        .material-icons {
+          font-size: 18px;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      &-brand {
+
+        img {
+          width: 132px;
+        }
+      }
+
+      .MobileSearch {
+        display: block;
+        margin-left: auto;
+
+        .btn {
+          color: $black;
+          padding: 0;
+          border: 0;
+          margin: 0 10px;
+          background-color: transparent;
+
+          .material-icons {
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .HeroSearch {
+        display: none;
+      }
+    }
+  }
+}

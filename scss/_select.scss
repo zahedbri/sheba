@@ -1,0 +1,57 @@
+.HeroSelect {
+
+  &__control {
+    cursor: text !important;
+    color: $dark;
+    padding: 12px;
+    border-width: 0 !important;
+    box-shadow: none !important;
+    @include border-radius(6px !important);
+  }
+
+  &__option {
+    cursor: pointer !important;
+    font-weight: 500;
+    line-height: 2;
+    text-align: left;
+    color: rgba($color: $black, $alpha: .9) !important;
+    padding: 12px 18px !important;
+    border-bottom: 1px solid rgba($color: $black, $alpha: .05);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin-right: 10px;
+      display: inline-block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(#{$assetPath}/images/trending-icon.svg);
+    }
+
+    &:after {
+      content: '';
+      float: right;
+      color: $primary;
+      padding: 3px;
+      margin-top: 12px;
+      border: solid $primary;
+      border-width: 0 2px 2px 0;
+      @include rotate(-45);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--is-focused,
+    &--is-selected {
+      background-color: $gray-100 !important;
+    }
+  }
+}

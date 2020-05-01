@@ -1,0 +1,83 @@
+.VideoIframe {
+
+  &-Backdrop {
+    background: rgba($color: $black, $alpha: .75);
+    backdrop-filter: blur(20px);
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  &.modal-lg {
+    @include media-breakpoint-down(xs) {
+      min-height: 100%;
+      margin: 0;
+    }
+  
+    @include media-breakpoint-between(sm, lg) {
+      max-width: 427px;
+    }
+  
+    @include media-breakpoint-between(lg, xl) {
+      max-width: 640px;
+    }
+  
+    @include media-breakpoint-up(xl) {
+      max-width: 854px;
+    }
+  }
+
+  .modal {
+
+    &-content {
+      border: 0;
+      background-color: transparent;
+    }
+
+    &-header {
+      border: 0;
+      padding: 0;
+
+      .close {
+        position: absolute;
+        right: 17px;
+        top: -18px;
+        padding: 5px 10px;
+        background-color: $white;
+        @include border-top-radius(4px);
+      }
+    }
+
+    &-body {
+      padding: 0;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+
+        @include media-breakpoint-down(xs) {
+          width: 100vw;
+          height: 56.25vw;
+        }
+
+        @include media-breakpoint-between(sm, lg) {
+          width: 427px;
+          height: 240px;
+        }
+
+        @include media-breakpoint-between(lg, xl) {
+          width: 640px;
+          height: 360px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          width: 853px;
+          height: 480px;
+        }
+      }
+    }
+  }
+}

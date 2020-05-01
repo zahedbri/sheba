@@ -6,6 +6,51 @@
   // -webkit-user-select: none;
 }
 
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+@mixin perspective($val) {
+  -webkit-perspective: $val; 
+  -moz-perspective: $val; 
+  -ms-perspective: $val; 
+  perspective: $val;
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+     -moz-align-content: $align;
+      -ms-align-content: $align;
+          align-content: $align;
+}
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+       -ms-flex-align: $align;
+          align-items: $align;
+}
+
 @mixin text-size-adjust($value: none) {
   -webkit-text-size-adjust: $value; 
      -moz-text-size-adjust: $value;
@@ -21,6 +66,32 @@
       -webkit-font-smoothing: subpixel-antialiased;
       -moz-osx-font-smoothing: auto;
   }
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	   -moz-transform: $transforms;
+	    -ms-transform: $transforms;
+	        transform: $transforms;
+}
+
+@mixin transform-style($val) {
+  -webkit-transform-style: $val;
+  -moz-transform-style: $val;
+  -ms-transform-style: $val;
+  transform-style: $val;
+}
+
+@mixin rotate($deg) { 
+	@include transform(rotate(#{$deg}deg));
+}
+
+@mixin rotateX($deg) { 
+	@include transform(rotateX(#{$deg}deg));
+}
+
+@mixin rotateY($deg) { 
+	@include transform(rotateY(#{$deg}deg));
 }
 
 @mixin transition($transition...) {

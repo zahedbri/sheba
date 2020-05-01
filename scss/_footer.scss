@@ -13,7 +13,7 @@
       color: rgba($color: $black, $alpha: .9);
       padding-bottom: 16px;
       text-transform: uppercase;
-      margin-bottom: 0;
+      margin-bottom: 0;   
     }
 
     &__Links {
@@ -32,6 +32,21 @@
             font-weight: 600;
             text-decoration: none;
           }
+        }
+      }
+    }
+
+    &__SocialLinks {
+      padding: 24px 0 0 0;
+      margin-bottom: 0;
+
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 15px;
+
+        &:first-child {
+          margin-left: 0;
         }
       }
     }

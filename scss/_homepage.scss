@@ -1,0 +1,732 @@
+// Hero Search
+.HeroSearch {
+  margin-top: 20px;
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+
+  &-LocationPicker {
+    
+    &__Btn {
+      color: $dark;
+      font-weight: 600;
+      padding: 17px 53px;
+      border-color: $white;
+      background-color: $white;
+      @include border-radius(6px);
+
+      &:hover,
+      &:focus {
+        color: $dark;
+        box-shadow: none;
+        border-color: $white;
+        background-color: $white;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &-Search {
+    position: relative;
+    margin-left: 20px;
+
+    .HeroSelect {
+      min-width: 530px;
+    }
+
+    &__Btn {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      padding-bottom: 1px;
+      @include border-radius(6px);
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+        border-color: $primary;
+        background-color: $primary;
+      }
+
+      .material-icons {
+        padding-top: 5px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Hero Banner
+.HeroBanner {
+  position: relative;
+  min-height: 460px;
+  padding: 50px 0;
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: $black, $alpha: .3);
+  }
+
+  &-Warp {
+    text-align: center;
+    z-index: 1;
+  }
+
+  &-Heading {
+    color: $white;
+    font-size: 56px;
+    font-weight: 600;
+  }
+
+  &-SubHeading {
+    color: $white;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+// Featured Categories - Mobile 
+.FeaturedCategoriesMobile {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+
+    .col-3 {
+      text-align: center;
+      padding: 16px 0;
+      border: 1px solid $gray-100;
+    }
+
+    &-Image {
+      width: 33px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    &-Title {
+      color: $black;
+      font-size: 10px;
+      font-weight: 400;
+      padding-top: 6px;
+    }
+
+    &-ViewAll {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      display: block;
+      margin: 10px auto 0;
+      color: $white;
+      font-size: 10px;
+      font-weight: 500;
+      background-color: $blue;
+      @include border-radius(100%);
+    }
+  }
+}
+
+// Featured Categories
+.FeaturedCategories {
+  margin-bottom: 50px;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &-BoxWarp {
+    margin-top: -58px;
+    text-align: center;
+    padding: 0 20px;
+    background-color: $white;
+    @include border-radius(8px);
+    box-shadow: 0 2px 5px 0 rgba($color: $black, $alpha: .1);
+
+    .slick {
+
+      &-next {
+        right: -42px;
+      }
+
+      &-prev {
+        left: -42px;
+      }
+    }
+  }
+
+  &-Item {
+    width: 100%;
+    padding: 20px 5px;
+    text-align: center;
+    border: 0;
+    @include border-radius(0);
+    background-color: transparent;
+    @include transition(all .3s ease-in-out);
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      background-color: $gray-100;
+    }
+
+    &__Image {
+      width: 40px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    &__Title {
+      width: 100%;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba($color: $black, $alpha: .75);
+      padding: 15px 0 0;
+      margin-bottom: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+// High Demand and Trending Services
+.HighDemand,
+.TrendingServices {
+  padding: 40px 0;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &-Heading {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+}
+
+.ServiceSlider {
+  margin-left: -15px;
+  margin-right: -15px;
+
+  &-Warp {
+    width: 100%;
+    display: block;
+    padding: 0 15px;
+  }
+
+  &-Item {
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &__Image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      @include border-radius(8px);
+    }
+
+    &__Title {
+      font-weight: 600;
+      color: rgba($color: $black, $alpha: .9);
+      text-align: center;
+      padding: 15px 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .slick {
+
+    &-arrow {
+      top: 90px;
+
+      &.slick-disabled {
+        display: none !important;
+      }
+    }
+
+    &-next {
+      right: -10px;
+    }
+
+    &-prev {
+      left: -10px;
+    }
+  }
+}
+
+// Happy Service
+.HappyService {
+  padding: 50px 0;
+  background-color: $gray-100;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &-BoxWarp {
+    padding: 30px 25px;
+    margin: 10px 0;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include border-radius(8px);
+    background-color: $white;
+  }
+
+  &-BoxTitle {
+    color: $dark;
+    font-weight: 600;
+  }
+
+  &-Banner {
+    height: 100%;
+
+    text-align: center;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+
+    img {
+      @include border-radius(10px);
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      height: auto;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+}
+
+// Counter
+.Counter {
+  padding: 30px 0;
+  border-top: 3px solid $white;
+  background-color: $gray-100;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &-Warp {
+    position: relative;
+    text-align: center;
+    margin-right: -1.5px;
+  }
+
+  &-Number {
+    font-size: 42px;
+    font-weight: 500;
+    color: $dark;
+    margin-bottom: 0;
+  }
+
+  &-Title {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba($color: $black, $alpha: .75);
+    margin-bottom: 0;
+  }
+
+  .col-md-4 {
+
+    .Counter-Warp {
+      border-right: 3px solid $white;
+    }
+
+    &:last-child {
+
+      .Counter-Warp {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+// Get Service
+.ServiceProcess {
+  padding: 50px 0;
+
+  &-List {
+    position: relative;
+    padding: 0;
+    margin: 0 0 0 120px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 256px;
+      top: 0;
+      left: -50px;
+      background-color: $gray-100;
+    }
+
+    &__Step {
+      position: relative;
+      list-style: none;
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        color: $white;
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 50px;
+        margin-left: -75px;
+        @include border-radius(100%);
+        background-image: linear-gradient(135deg,#23a999 1%,#00a1ba 52%,#006597);
+      }  
+
+      &--Header {
+        font-size: 20px;
+        font-weight: 600;
+        color: rgba($color: $black, $alpha: .8);
+      }
+
+      &--Text {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 50px;
+
+      &:before {
+        content: none;
+      }
+
+      &__Step {
+        margin-bottom: 20px;
+
+        span {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          margin-left: -50px;
+        }
+
+        &--Header {
+          font-size: 16px;
+          font-weight: 500;
+        }
+  
+        &--Text {
+          font-size: 12px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  
+    @include media-breakpoint-between(sm, lg) {
+      margin-left: 80px;
+
+      &__Step {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+// Testimonial
+.ServiceProcess,
+.Testimonial {
+
+  &-Slider {
+
+    &__InnerBox {
+      position: relative;
+      padding: 20px 0 20px 40px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 100%;
+        background-color: $info;
+      }
+    }
+  }
+
+  &-Comment {
+    font-size: 20px;
+    font-weight: 100;
+    color: rgba($color: $black, $alpha: .7);
+    line-height: 1.5;
+    position: relative;
+    font-style: italic;
+
+    &:before {
+      content: '“';
+      font-weight: 900;
+      font-size: 42px;
+      color: rgba($color: $black, $alpha: .8);
+      line-height: 0;
+      margin-right: 10px;
+    }
+
+    &__Client {
+      color: rgba($color: $black, $alpha: .9);
+      margin-bottom: 5px;
+    }
+
+    &__Profession {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: rgba($color: $black, $alpha: .9);
+      margin: 0 0 0 8px;
+    }
+  }
+
+  &-Banner {
+    overflow: hidden;
+    position: relative;
+    height: 320px;
+    @include border-radius(8px);
+    background-size: cover;
+    background-position: 50%;
+
+    &__Video {
+      cursor: pointer;
+    
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: $black, $alpha: .3);
+      }
+
+      &--PlayBtn {
+        display: block;
+        z-index: 1;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 190px;
+
+      &__Video {
+
+        &--PlayBtn {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
+
+  .slick {
+
+    &-next,
+    &-prev {
+      left: 50px;
+      bottom: -70px;
+      top: auto;
+    }
+
+    &-next {
+      left: 100px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &-Slider {
+  
+      &__InnerBox {
+        padding: 0 0 20px 0;
+
+        &:before {
+          content: none;
+        }
+      }
+    }
+
+    &-Comment {
+      font-size: 16px;
+
+      &:before {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+
+    &-VideoBanner {
+      height: 195px;
+
+      &__PlayBtn {
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    .slick {
+
+      &-next {
+        bottom: -75px;
+        left: 50%;
+      }
+
+      &-prev {
+        bottom: -75px;
+        left: calc(50% - 50px);
+      }
+    }
+  }
+}
+
+// Testimonial
+.Testimonial {
+  padding: 80px 0;
+  background-color: $gray-100;
+
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0 70px;
+    background-color: #f7faff;
+  }
+}
+
+// App download
+.AppDownload {
+  padding: 50px 0;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &-AppIcon {
+    width: auto;
+    height: 50px;
+    display: inline-block;
+  }
+
+  &-SendApp {
+    width: 90%;
+    margin-top: 20px;
+    display: inline-block;
+
+    .form-control {
+      font-size: 16px;
+      height: calc(1.74em + 1rem + 2px);
+      border-right: 0;
+      @include border-top-left-radius(8px);
+      @include border-bottom-left-radius(8px);
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .btn.btn-primary {
+      font-size: 18px;
+      font-weight: 600;
+      @include border-top-right-radius(8px);
+      @include border-bottom-right-radius(8px);
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+// Request service
+.RequestService {
+  padding: 50px 0;
+  position: relative;
+  background-color: $gray-100;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &-Heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: $dark;
+  }
+
+  &-CallIcon {
+    font-size: 18px;
+  }
+
+  &-Banner {
+    position: absolute;
+    bottom: -50px;
+  }
+}
+
+// Become partner and Office solution 
+.OfficeSolution,
+.BecomePartner {
+  padding: 60px 0;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &-SectionList {
+
+    li {
+      position: relative;
+      list-style: none;
+      padding-bottom: 16px;
+
+      i {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 15px;
+        height: 15px;
+        color: $white;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        margin-left: -40px;
+        @include border-radius(100%);
+        background-image: linear-gradient(135deg,#23a999 1%,#00a1ba 52%,#006597);
+      }
+    }
+  }
+}
+
+// Become partner
+.BecomePartner {
+  background-color: $gray-100;
+}

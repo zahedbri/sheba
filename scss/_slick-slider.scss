@@ -1,0 +1,53 @@
+.slick {
+
+  &-track,
+  &-slide,
+  &-slide > div,
+  &-slide > div > div {
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-next,
+  &-prev {
+    width: 42px;
+    height: 42px;
+    @include border-radius(100%);
+    background-color: $white;
+    box-shadow: 0 2px 5px 0 rgba($color: $black, $alpha: .1);
+    z-index: 99;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+    }
+
+    &:before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      color: $gray-600;
+      border-top: 3px solid $primary;
+      border-right: 3px solid $primary;
+      @include rotate(225);
+    }
+
+    &.slick-disabled {
+
+      &:before {
+        opacity: .32;
+        border-color: $black;
+      }
+    }
+  }
+
+  &-next {
+
+    &:before {
+      @include rotate(45);
+    }
+  }
+}
