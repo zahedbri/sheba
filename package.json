@@ -20,7 +20,9 @@
   },
   "homepage": "https://sonjoydatta.github.io/sheba",
   "dependencies": {
+    "@popperjs/core": "^2.4.0",
     "bootstrap": "^4.4.1",
+    "jquery": "^1.9.1",
     "material-icons": "^0.3.1",
     "next": "^9.3.5",
     "react": "^16.13.1",
