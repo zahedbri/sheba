@@ -10,7 +10,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "heroku-postbuild": "npm run build"
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/sonjoydatta/sheba/issues"
   },
-  "homepage": "https://github.com/sonjoydatta/sheba#readme",
+  "homepage": "https://sonjoydatta.github.io/sheba",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "material-icons": "^0.3.1",
@@ -33,6 +33,7 @@
     "react-slick": "^0.25.2"
   },
   "devDependencies": {
+    "babel-plugin-transform-define": "^2.0.0",
     "sass": "^1.26.5"
   }
 }
