@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SearchFilter from './SearchFilter';
 import Navigation from './Navigation';
 
-function Header(props) {
+function Header(props) { 
   return (
     <div className="bg-white shadow-sm fixed-top">
       <Container>
