@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll"
   },
   "repository": {
     "type": "git",
@@ -20,11 +20,9 @@
   },
   "homepage": "https://sonjoydatta.github.io/sheba",
   "dependencies": {
-    "@popperjs/core": "^2.4.0",
     "bootstrap": "^4.4.1",
-    "jquery": "^1.9.1",
     "material-icons": "^0.3.1",
-    "next": "^9.3.5",
+    "next": "^9.3.6",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
