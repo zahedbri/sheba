@@ -18,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/sonjoydatta/sheba/issues"
   },
-  "homepage": "https://sonjoydatta.github.io/sheba",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^3.5.0",
