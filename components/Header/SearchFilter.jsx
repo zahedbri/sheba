@@ -2,11 +2,13 @@ import { useContext, useState, useEffect } from 'react';
 import { Button, Image } from 'react-bootstrap';
 
 import AppContext from '../AppContext';
-import HeroSearch from '../Homepage/HeroSearch';
+import HeroSearch from '../Search/HeroSearch';
+import LocationPicker from '../Modal/LocationPicker';
 
 function SearchFilter(props) {
   const { isMobile } = useContext(AppContext);
   const [scrollY, setScrollY] = useState(0);
+  const [modalShow, setModalShow] = useState(false);
 
   function scrollHeight() {
     setScrollY(window.pageYOffset);
@@ -30,7 +32,12 @@ function SearchFilter(props) {
         ><i className="material-icons">search</i></Button>
         <Button
           variant="primary"
+          onClick={() => setModalShow(true)}
         ><Image src="./static/images/location-icon.svg" /></Button>
+        <LocationPicker 
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
       </div>
     );
   }

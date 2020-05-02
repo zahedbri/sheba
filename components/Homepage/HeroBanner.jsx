@@ -1,4 +1,4 @@
-import HeroSearch from './HeroSearch';
+import HeroSearch from '../Search/HeroSearch';
 
 function HeroBanner(props) {
   return (

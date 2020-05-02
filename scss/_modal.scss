@@ -81,3 +81,112 @@
     }
   }
 }
+
+.LocationPicker {
+
+  .modal {
+
+    &-content {
+      background-color: $gray-100;
+    }
+
+    &-header {
+      position: relative;
+      border-bottom: 0;
+
+      .close {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        padding: 0;
+        background-color: $gray-100;
+        @include border-radius(100%);
+        box-shadow: 0 0.125rem 0.25rem rgba($color: $black, $alpha: .25);
+
+        &:hover,
+        &:focus {
+          opacity: 1;
+          outline: none;
+          background-color: $gray-300;
+        }
+
+        span {
+          color: $primary;
+          font-size: 36px;
+          font-weight: 400;
+        }
+      }
+    }
+    
+    &-title {
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &-body {
+
+      .btn {
+        width: 300px;
+        height: 160px;
+        padding: 17px 30px;
+        margin: 15px 10px;
+        border: 1px solid rgba($color: $black, $alpha: .15);
+        @include border-radius(8px);
+        background-color: $white;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &-gps {
+          width: auto;
+          height: auto;
+          font-weight: 600;
+          display: flex;
+          margin: 0 auto 30px;
+          padding: 10px 30px;
+
+          &:hover {
+            background-color: $primary;
+          }
+        }
+
+        img {
+          width: auto;
+          height: 95px;
+        }
+
+        h4 {
+          color: $primary;
+          font-size: 20px;
+          font-weight: 600;
+          margin: 10px 0 0 0;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      &-body {
+        text-align: center;
+
+        .btn {    
+          width: 270px;
+          margin-left: auto;
+          margin-right: auto;
+
+          &-gps {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
