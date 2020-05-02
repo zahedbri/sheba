@@ -9,7 +9,7 @@ function Homepage( props ) {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    let timer = setTimeout(() => setIsLoaded(true), 1000);
+    let timer = setTimeout(() => setIsLoaded(true), 2000);
     return () => { clearTimeout(timer) }
   }, []);
   
