@@ -1,7 +1,7 @@
 import { Modal, Button, Image } from 'react-bootstrap';
 
 function LocationPicker( props ) {
-  const { ...rest } = props;
+  const { onHide, ...rest } = props;
 
   return (
     <Modal
@@ -15,6 +15,10 @@ function LocationPicker( props ) {
         closeButton
         className="shadow-sm" 
       >
+        <Button
+          variant="link"
+          onClick={onHide}
+        ><i className="material-icons">keyboard_backspace</i></Button>
         <Modal.Title>Select Your City</Modal.Title>
       </Modal.Header>
       <Modal.Body>

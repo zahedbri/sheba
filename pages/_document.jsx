@@ -11,6 +11,7 @@ class AppDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+          <title>Sheba Marketplace</title>
         </Head>
         <body>
           <Main />

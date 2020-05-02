@@ -94,6 +94,10 @@
       position: relative;
       border-bottom: 0;
 
+      .btn {
+        display: none;
+      }
+
       .close {
         opacity: 1;
         position: absolute;
@@ -151,7 +155,7 @@
           height: auto;
           font-weight: 600;
           display: flex;
-          margin: 0 auto 30px;
+          margin: 15px auto 30px auto;
           padding: 10px 30px;
 
           &:hover {
@@ -172,8 +176,40 @@
         }
       }
     }
+  }
 
-    @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(sm) {
+    margin: 0;
+
+    .modal {
+
+      &-content {
+        border-width: 0;
+        @include border-radius(0);
+      }
+
+      &-header {
+
+        .btn {
+          display: inline-block;
+          height: 24px;
+          padding-top: 0;
+          padding-left: 0;
+          padding-bottom: 0;
+          border-width: 0;
+        }
+
+        .close {
+          display: none;
+        }
+      }
+    
+      &-title {
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
       &-body {
         text-align: center;
 

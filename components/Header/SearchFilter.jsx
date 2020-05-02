@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect } from 'react';
 import { Button, Image } from 'react-bootstrap';
+import Link from 'next/link';
 
 import AppContext from '../AppContext';
 import HeroSearch from '../Search/HeroSearch';
@@ -27,9 +28,11 @@ function SearchFilter(props) {
   if (isMobile) {
     return (
       <div className="MobileSearch">
-        <Button
-          variant="primary"
-        ><i className="material-icons">search</i></Button>
+        <Link href="/search">
+          <a className="btn btn-primary">
+            <i className="material-icons">search</i>
+          </a>
+        </Link>
         <Button
           variant="primary"
           onClick={() => setModalShow(true)}
