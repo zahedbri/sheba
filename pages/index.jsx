@@ -1,4 +1,5 @@
 import { Fragment, useState, useEffect } from 'react';
+import Head from 'next/head';
 
 import { PageLoader, Layout } from '../components';
 import { isMobileAgent } from '../utils';
@@ -77,6 +78,9 @@ function Homepage( props ) {
         ]
       }}
     >
+      <Head>
+        <title>Sheba Marketplace</title>
+      </Head>
       {
         isLoaded ?
           <Layout>

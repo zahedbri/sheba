@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Error from 'next/error';
+import Head from 'next/head';
 
 import { PageLoader } from '../components';
 import { isMobileAgent } from '../utils';
@@ -28,6 +29,9 @@ function search( props ) {
           ]
         }}
       >
+        <Head>
+          <title>Search service | Sheba Marketplace</title>
+        </Head>
         {
           isLoaded ?
             <div className="MobileSearch">
